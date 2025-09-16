@@ -1,0 +1,68 @@
+/* Sticky Action Buttons Feature */
+
+/* Sticky table container setup */
+.nova-sticky-table-container {
+    position: relative;
+}
+
+/* Sticky action header */
+.nova-sticky-actions-header {
+    position: sticky !important;
+    right: 0 !important;
+    z-index: 10 !important;
+    background: white !important;
+    border-left: 1px solid #e5e7eb !important;
+    box-shadow: -2px 0 4px rgba(0, 0, 0, 0.05) !important;
+}
+
+/* Dark mode support for sticky header */
+.dark .nova-sticky-actions-header {
+    background: #1f2937 !important;
+    border-left-color: #374151 !important;
+}
+
+/* Sticky action cells */
+.nova-sticky-actions-cell {
+    position: sticky !important;
+    right: 0 !important;
+    z-index: 9 !important;
+    background: white !important;
+    border-left: 1px solid #e5e7eb !important;
+    box-shadow: -2px 0 4px rgba(0, 0, 0, 0.05) !important;
+}
+
+/* Dark mode support for sticky cells */
+.dark .nova-sticky-actions-cell {
+    background: #1f2937 !important;
+    border-left-color: #374151 !important;
+}
+
+/* Ensure action buttons maintain proper spacing */
+.nova-sticky-actions-cell .inline-flex {
+    justify-content: flex-end !important;
+}
+
+/* Handle hover states for sticky cells */
+.nova-sticky-actions-cell:hover {
+    background: #f9fafb !important;
+}
+
+.dark .nova-sticky-actions-cell:hover {
+    background: #374151 !important;
+}
+
+/* Smooth transitions for better UX */
+.nova-sticky-actions-header,
+.nova-sticky-actions-cell {
+    transition: box-shadow 0.2s ease !important;
+}
+
+/* Handle responsive behavior */
+@media (max-width: 768px) {
+    .nova-sticky-actions-header,
+    .nova-sticky-actions-cell {
+        position: static !important;
+        box-shadow: none !important;
+        border-left: none !important;
+    }
+}

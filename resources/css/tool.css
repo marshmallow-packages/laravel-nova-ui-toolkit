@@ -1,0 +1,14 @@
+/* Laravel Nova UI Toolkit - Main Styles */
+
+/* Import feature styles */
+@import "./features/sticky-action-buttons.css";
+
+/* Global styles and overrides */
+
+/* Ensure dropdowns and modals appear above sticky elements */
+.dropdown-menu,
+.modal,
+[role="menu"],
+[role="dialog"] {
+    z-index: 50 !important;
+}
